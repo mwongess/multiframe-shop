@@ -1,6 +1,8 @@
-import Product from "./components/Product";
+"use client";
 
-export default function Home() {
+import Product from "../components/Product";
+
+const Products = () => {
   const products = [
     {
       name: "Product 1",
@@ -23,13 +25,23 @@ export default function Home() {
       image: "https://example.com/product3.jpg",
       count: 20,
     },
+    {
+      name: "Product 4",
+      description: "This is the third product description.",
+      price: 9.99,
+      image: "https://example.com/product3.jpg",
+      count: 20,
+    },
+    // Add more products here
   ];
 
   return (
-    <>
+    <div className="sm:grid grid-cols-4 gap-3">
       {products.map(() => (
        <Product/>
       ))}
-    </>
+    </div>
   );
-}
+};
+
+export default Products;

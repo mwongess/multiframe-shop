@@ -30,7 +30,7 @@ const Login= () => {
     <>
       <div className="sm:w-[30%] 2xl:w-[40%]">
         <form className="w-full">
-          <button className="bg-[#4065b4] text-white py-2 w-full">Login with Google</button>
+          <button className="bg-[#4065b4] text-white py-2 w-full my-3">Login with Google</button>
 
           {inputsData.map((data) => (
             <Input inputData={data} />
