@@ -1,3 +1,5 @@
+"use client"
+
 const Cart = () => {
   return (
     <div>page</div>
