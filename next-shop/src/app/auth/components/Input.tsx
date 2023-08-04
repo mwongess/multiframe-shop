@@ -4,7 +4,7 @@ const Input = ({
     inputData: { label: string; inputType: string; placeholder: string };
 }) => {
     return (
-        <div className="flex flex-col mb-2">
+        <div className="flex flex-col mb-3">
             <label className="font-bold" htmlFor="">{inputData.label}</label>
             <input
                 className="border rounded p-2"
