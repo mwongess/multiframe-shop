@@ -32,11 +32,32 @@ const Products = () => {
       image: "https://example.com/product3.jpg",
       count: 20,
     },
+    {
+      name: "Product 2",
+      description: "This is the second product description.",
+      price: 29.99,
+      image: "https://example.com/product2.jpg",
+      count: 5,
+    },
+    {
+      name: "Product 3",
+      description: "This is the third product description.",
+      price: 9.99,
+      image: "https://example.com/product3.jpg",
+      count: 20,
+    },
+    {
+      name: "Product 4",
+      description: "This is the third product description.",
+      price: 9.99,
+      image: "https://example.com/product3.jpg",
+      count: 20,
+    },
     // Add more products here
   ];
 
   return (
-    <div className="sm:grid grid-cols-4 gap-3">
+    <div className="sm:grid grid-cols-6 gap-3">
       {products.map(() => (
        <Product/>
       ))}
