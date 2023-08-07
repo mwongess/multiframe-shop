@@ -1,4 +1,6 @@
-const Product = () => {
+"use client"
+
+const Product = ({product}: {product: {imgPath: string, name: string, description:string, price: string}}) => {
     return (
         <div className="border ">
             <div>
