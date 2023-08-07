@@ -57,7 +57,7 @@ const Products = () => {
   ];
 
   return (
-    <div className="sm:grid grid-cols-6 gap-3">
+    <div className="sm:grid grid-cols-5 gap-3 bg-[#f1f3f4] p-3">
       {products.map((product) => (
        <Product product={product}/>
       ))}
