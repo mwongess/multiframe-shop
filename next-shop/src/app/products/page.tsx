@@ -58,8 +58,8 @@ const Products = () => {
 
   return (
     <div className="sm:grid grid-cols-6 gap-3">
-      {products.map(() => (
-       <Product/>
+      {products.map((product) => (
+       <Product product={product}/>
       ))}
     </div>
   );

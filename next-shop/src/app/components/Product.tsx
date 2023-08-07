@@ -1,6 +1,6 @@
 "use client"
 
-const Product = ({product}: {product: {imgPath: string, name: string, description:string, price: string}}) => {
+const Product = ({product}: {product: {image: string, name: string, description:string, price: number}}) => {
     return (
         <div className="border ">
             <div>
