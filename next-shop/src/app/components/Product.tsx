@@ -1,19 +1,31 @@
-"use client"
+"use client";
 
-const Product = ({product}: {product: {image: string, name: string, description:string, price: number}}) => {
-    return (
-        <div className="border ">
-            <div>
-                <img className="w-full" src="https://image.kilimall.com/kenya/shop/store/goods/7766/2023/07/1688179988947cb6fa02e754646e3be898bc3d3c60a33_240.jpg.webp" alt="img" />
-            </div>
-            <h1>Trouser</h1>
-            <p >Short Description</p>
-            <div className="flex justify-between">
-                <p className="">Price</p>
-                <p>Rating</p>
-            </div>
+import Link from "next/link";
+
+const Product = ({
+  product,
+}: {
+  product: { image: string; name: string; description: string; price: number };
+}) => {
+  return (
+    <Link href="/readmore/1" className="bg-[#fefefe] rounded-lg cursor-pointer">
+      <div className="h-40 ">
+        <img
+          className="w-full h-full object-cover rounded-t-lg"
+          src="https://image.kilimall.com/kenya/shop/store/goods/6070/2023/03/167824720799437190b023c91422f83bddcc292a43925_240.jpg.webp"
+          alt="img"
+        />
+      </div>
+      <div className="p-3">
+        <h1>{product.name}</h1>
+        <p className="font-bold">{product.description}</p>
+        <div className="flex justify-between">
+          <p className="text-[#2a977d] font-bold">${product.price}</p>
+          {/* <p>{product.}</p> */}
         </div>
-    );
+      </div>
+    </Link>
+  );
 };
 
 export default Product;
