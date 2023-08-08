@@ -21,7 +21,6 @@ const Product = ({
                 <p className="font-bold">{product.description}</p>
                 <div className="flex justify-between">
                     <p className="text-[#fd6141] font-bold text-lg">${product.price}</p>
-                   
 
 
                 </div>
