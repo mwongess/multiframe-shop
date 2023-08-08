@@ -3,7 +3,7 @@
 const Readmore = ({ params }: { params: any }) => {
   return (
     <div className="flex border-white justify-center p-8 gap-8">
-      <div className="w-[30%]">
+      <div className="w-[40%]">
         <img
           className="w-full h-full object-cover"
           src="https://image.kilimall.com/kenya/shop/store/goods/6070/2023/03/1678247207784c49f20bca4f04609bcdb898322ebba7f_720.jpg.webp"

@@ -16,7 +16,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className + " 2xl:flex 2xl:justify-center bg-[#e6e8ea]"}>{children}</body>
+      <body className={inter.className + " 2xl:flex 2xl:justify-center bg-[#e6e8ea]"}>
+        <div className="2xl:w-[55vw]">
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
