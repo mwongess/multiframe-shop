@@ -9,18 +9,16 @@ const Product = ({
 }) => {
     return (
         <Link href="/readmore/1" className="bg-[#fefefe] rounded-lg cursor-pointer">
-            <div className=" ">
-                <img
-                    className="w-full h-full object-cover rounded-t-lg"
-                    src="https://image.kilimall.com/kenya/shop/store/goods/6070/2023/03/167824720799437190b023c91422f83bddcc292a43925_240.jpg.webp"
-                    alt="img"
-                />
-            </div>
+            <img
+                className="w-full object-cover rounded-t-lg"
+                src="https://i.pinimg.com/236x/bd/a0/d9/bda0d91b36730d90758aff879446d3ca.jpg"
+                alt="img"
+            />
             <div className="p-3">
                 <h1>{product.name}</h1>
                 <p className="font-bold">{product.description}</p>
                 <div className="flex justify-between">
-                    <p className="text-[#fd6141] font-bold text-lg">${product.price}</p>
+                    <p className="text-[#fd6141] font-bold text-lg">Ksh {product.price}</p>
 
 
                 </div>

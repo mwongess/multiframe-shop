@@ -20,7 +20,7 @@ const Readmore = ({ params }: { params: any }) => {
             <img className="w-full rounded" src="https://image.kilimall.com/kenya/shop/store/goods/6070/2023/03/1678247207784c49f20bca4f04609bcdb898322ebba7f_720.jpg.webp" alt="" />
           </div>
           <div>
-            <img className="w-full  rounded object-cover"  src="https://image.kilimall.com/kenya/shop/store/goods/6070/2023/03/1678247207784c49f20bca4f04609bcdb898322ebba7f_720.jpg.webp" alt="" />
+            <img className="w-full  rounded"  src="https://image.kilimall.com/kenya/shop/store/goods/6070/2023/03/1678247207784c49f20bca4f04609bcdb898322ebba7f_720.jpg.webp" alt="" />
           </div>
         </div>
       </div>
