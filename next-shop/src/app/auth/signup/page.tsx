@@ -34,7 +34,7 @@ const Signup = () => {
 
   return (
     <>
-      <div className="w-full sm:w-[50%] 2xl:w-[40%]">
+      <div className="self-center  w-full sm:w-[50%] 2xl:w-[40%]">
         <form className="w-full">
           <button className="bg-[#4065b4] text-white py-2 w-full my-3">Login with Google</button>
 

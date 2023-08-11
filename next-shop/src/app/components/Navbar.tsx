@@ -1,3 +1,5 @@
+"use client"
+
 import Link from "next/link"
 import { FaRegUser, FaAngleDown, FaRegHeart, FaShoppingBag } from "react-icons/fa";
 
