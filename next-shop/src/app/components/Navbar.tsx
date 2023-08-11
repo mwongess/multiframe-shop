@@ -51,7 +51,7 @@ const Navbar = () => {
                     </HoverCardTrigger>
                     <HoverCardContent>
                         <p>You have _ items in your cart!</p>
-                        <button className="w-full rounded p-2 bg-[#fd6141] text-white">View your cart</button>
+                        <button className="w-full rounded p-2 bg-[#fbd0cc] text-white">View your cart</button>
                     </HoverCardContent>
                 </HoverCard>
             </div>
