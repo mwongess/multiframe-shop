@@ -1,6 +1,6 @@
 "use client";
 
-import Product from "../components/Product";
+import Product from "@/components/Product";
 
 const Products = () => {
   const products = [
