@@ -3,6 +3,7 @@
 import AboutItem from "@/components/AboutItem";
 import Description from "@/components/Description";
 import QuantityAdjuster from "@/components/QuantityAdjuster";
+import SellerInfo from "@/components/SellerInfo";
 import ShippingInfo from "@/components/ShippingInfo";
 import SizePicker from "@/components/SizePicker";
 import { FaShoppingBag } from "react-icons/fa";
@@ -37,10 +38,11 @@ const Readmore = ({ params }: { params: any }) => {
           <SizePicker />
         </div>
         <AboutItem />
-        
+
         <h1 className="mt-4 font-bold">Description</h1>
         <Description />
-        <ShippingInfo/>
+        <ShippingInfo />
+        <SellerInfo />
       </div>
 
       <div className="flex flex-col bg-[#fefefe] p-3 gap-3 w-[30%] h-fit">
