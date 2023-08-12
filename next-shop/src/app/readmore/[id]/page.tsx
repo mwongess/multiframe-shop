@@ -1,8 +1,14 @@
 "use client";
 
+import AboutItem from "@/components/AboutItem";
+import Description from "@/components/Description";
+import QuantityAdjuster from "@/components/QuantityAdjuster";
+import SizePicker from "@/components/SizePicker";
+import { FaShoppingBag } from "react-icons/fa";
+
 const Readmore = ({ params }: { params: any }) => {
   return (
-    <div className="flex border-white justify-center p-8 gap-8">
+    <div className="flex border-white justify-center p-8 gap-8 bg-white">
       <div className="w-[40%]">
         <img
           className="w-full object-cover"
@@ -20,21 +26,21 @@ const Readmore = ({ params }: { params: any }) => {
             <img className="w-full rounded" src="https://image.kilimall.com/kenya/shop/store/goods/6070/2023/03/1678247207784c49f20bca4f04609bcdb898322ebba7f_720.jpg.webp" alt="" />
           </div>
           <div>
-            <img className="w-full  rounded"  src="https://image.kilimall.com/kenya/shop/store/goods/6070/2023/03/1678247207784c49f20bca4f04609bcdb898322ebba7f_720.jpg.webp" alt="" />
+            <img className="w-full  rounded" src="https://image.kilimall.com/kenya/shop/store/goods/6070/2023/03/1678247207784c49f20bca4f04609bcdb898322ebba7f_720.jpg.webp" alt="" />
           </div>
         </div>
       </div>
-      <div className="w-[30%] h-fit border-b border-white">
-        <h1>Description</h1>
-        <div>
-          <p>Choose size</p>
-          <div>
-            <p>S</p>
-            <p>M</p>
-            <p>L</p>
-          </div>
+      <div className="w-[30%] h-fit">
+        <div className=" border-b bg-white">
+          <h1 className="font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+          <SizePicker />
         </div>
+        <AboutItem />
+        
+        <h1 className="mt-4 font-bold">Description</h1>
+        <Description />
       </div>
+
       <div className="flex flex-col bg-[#fefefe] p-3 gap-3 w-[30%] h-fit">
         <p className="font-bold">Order</p>
         <div className="flex items-center gap-2">
@@ -44,12 +50,14 @@ const Readmore = ({ params }: { params: any }) => {
             <h1 className="font-bold">XL(XL)</h1>
           </div>
         </div>
+        <QuantityAdjuster />
         <div className="flex justify-between">
           <h1>Total price</h1>
           <p className="font-bold">$45.00</p>
         </div>
         <button className="bg-[#fd6141] text-white p-3">Buy Now</button>
-        <button className="border border-[#fd6141] text-[#fd6141] p-3">
+        <button className="flex justify-center items-center gap-3 border border-[#fd6141] text-[#fd6141] p-3">
+          <FaShoppingBag />
           Add To Bag
         </button>
       </div>
