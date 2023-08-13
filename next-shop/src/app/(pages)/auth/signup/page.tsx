@@ -1,9 +1,9 @@
 "use client";
 
+import AuthButton from "@/components/AuthButton";
+import Input from "@/components/Input";
 import Link from "next/link";
 import { useState } from "react";
-import AuthButton from "../components/AuthButton";
-import Input from "../components/Input";
 
 const Signup = () => {
   const [user, setUser] = useState({

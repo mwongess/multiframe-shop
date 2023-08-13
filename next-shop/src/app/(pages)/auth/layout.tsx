@@ -1,5 +1,5 @@
+import Swiper from "@/components/Swiper";
 import React from "react";
-import Swiper from "./components/Swiper";
 
 const AuthLayout = ({ children }: { children: React.ReactNode }) => {
   return (
