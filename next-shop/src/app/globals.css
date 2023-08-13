@@ -2,3 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
+@keyframes grow1 {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.25);
+    }
+  }
+  
+  .grow1 {
+    animation: grow 0.3s ease-in-out forwards;
+  }
+  
