@@ -15,15 +15,12 @@ const Product = ({
                     src={product.image}
                     alt="img"
                 />
-
             </div>
             <div className="p-3 h-[30%]">
                 <h1>{product.name}</h1>
                 <p className="font-bold">{product.description}</p>
                 <div className="flex justify-between">
                     <p className="text-[#fd6141] font-bold text-lg">Ksh {product.price}</p>
-
-
                 </div>
             </div>
         </Link>
