@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import AuthButton from "../components/AuthButton";
-import Input from "../components/Input";
+import AuthButton from "@/components/AuthButton";
+import Input from "@/components/Input";
 
 const Login= () => {
   const [user, setUser] = useState({
@@ -17,11 +17,13 @@ const Login= () => {
     {
       label: "Email",
       inputType: "email",
+      className: "email",
       placeholder: "nextshop@mwongess.com",
     },
     {
       label: "Password",
       inputType: "password",
+      className: "pass",
       placeholder: "****",
     },
   ];
@@ -40,7 +42,7 @@ const Login= () => {
             <input type="checkbox" name="" id="" />
             <p className="no-wrap">I agree with the terms and conditions</p>
           </div>
-          <AuthButton text="Login Rn" />
+          <AuthButton text="Login Rn" type="login" />
           <p>OR</p>
           <div className="flex">
             <p>Dont have an account?</p>

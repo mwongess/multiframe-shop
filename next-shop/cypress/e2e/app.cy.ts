@@ -8,9 +8,9 @@ describe('Navigation', () => {
       cy.get('.pass').type('nextshop')
   
       // Click the login button
-      cy.contains('login').click()
-  
-      // You can add assertions here to verify successful login if needed
+      cy.contains('Login Rn').click()
+    
+      cy.visit('/')
     })
   })
   

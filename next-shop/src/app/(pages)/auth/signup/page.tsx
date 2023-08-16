@@ -18,16 +18,19 @@ const Signup = () => {
     {
       label: "Full Name",
       inputType: "text",
+      className: "name",
       placeholder: "Next Shop",
     },
     {
       label: "Email",
       inputType: "email",
+      className: "email",
       placeholder: "nextshop@mwongess.com",
     },
     {
       label: "Password",
       inputType: "password",
+      className: "pass",
       placeholder: "****",
     },
   ];
@@ -46,7 +49,7 @@ const Signup = () => {
             <input type="checkbox" name="" id="" />
             <p className="no-wrap">I agree with the terms and conditions</p>
           </div>
-          <AuthButton text="Get Started" />
+          <AuthButton text="Get Started" type="signup"/>
           <p>OR</p>
           <div className="flex">
             <p>Have an account?</p>
