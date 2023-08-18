@@ -1,6 +1,8 @@
+import Image from "next/image"
+
 const ProductImage = () => {
   return (
-    <div>ProductImage</div>
+    <Image src="" alt=""/>
   )
 }
 
