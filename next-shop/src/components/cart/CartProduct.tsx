@@ -3,9 +3,12 @@ import ProductImage from "./ProductImage"
 const CartProduct = () => {
   return (
     <div>
-      <ProductImage/>
+      <ProductImage />
       <div>
-        <p>Lorem ipsum dolor sit.</p>
+        <div>
+          <p >Lorem ipsum dolor sit.</p>
+          <p>Ksh 200</p>
+        </div>
         <p>Delivery in 2 days</p>
         <button>Remove</button>
       </div>
