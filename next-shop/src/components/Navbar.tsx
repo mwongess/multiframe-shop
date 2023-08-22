@@ -16,7 +16,7 @@ const Navbar = () => {
     return (
         <div className="flex items-center px-8 py-4 border-b border-white justify-between">
             <div className="flex items-center gap-[2.5rem]">
-                <h1 className="font-bold text-2xl">DESIGNERSTORE</h1>
+                <h1 className="font-bold text-2xl cursor-pointer" onClick={()=> router.push('/')}>DESIGNERSTORE</h1>
                 <div className="flex items-center  gap-6">
                     <Link href="">🔥Women</Link>
                     <Link href="">🤪Men</Link>

@@ -4,19 +4,10 @@ import NavLink from "../NavLink"
 
 const Steps = () => {
   return (
-    <div className="flex justify-between border-b border-white px-8">
-      <div className="text-center">
-        <p>1</p>
-        <NavLink  href=""><FaShoppingBag /> Cart</NavLink>
-      </div>
-      <div className="text-center">
-        <p>2</p>
-        <NavLink href="/cart/details"><FaInfoCircle />Delivery Details</NavLink>
-      </div>
-      <div className="text-center">
-        <p>3</p>
-        <NavLink href="/cart/payment"><FaCreditCard /> Payment</NavLink>
-      </div>
+    <div className="flex justify-between  border-white px-12 py-4 border-b">
+      <NavLink href=""><FaShoppingBag /> Cart</NavLink>
+      <NavLink href="/cart/details"><FaInfoCircle />Delivery Details</NavLink>
+      <NavLink href="/cart/payment"><FaCreditCard /> Payment</NavLink>
     </div>
   )
 }
