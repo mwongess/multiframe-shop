@@ -4,6 +4,8 @@ const ProductList = () => {
   return (
     <div>
         <CartProduct/>
+        <CartProduct/>
+        <CartProduct/>
     </div>
   )
 }
