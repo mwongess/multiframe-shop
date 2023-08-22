@@ -4,7 +4,7 @@ import ProductList from "@/components/cart/ProductList"
 
 const Cart = () => {
   return (
-    <div className="flex justify-between">
+    <div className="flex justify-between ">
       <ProductList />
       <div>
         <p>Pricing Details</p>

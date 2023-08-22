@@ -2,6 +2,7 @@
 
 import Link from "next/link"
 import { FaRegUser, FaAngleDown, FaShoppingBag } from "react-icons/fa";
+import { useRouter } from 'next/navigation'
 
 import {
     HoverCard,
@@ -11,6 +12,7 @@ import {
 
 
 const Navbar = () => {
+    const router = useRouter()
     return (
         <div className="flex items-center px-8 py-4 border-b border-white justify-between">
             <div className="flex items-center gap-[2.5rem]">
@@ -51,7 +53,7 @@ const Navbar = () => {
                     </HoverCardTrigger>
                     <HoverCardContent>
                         <p>You have _ items in your cart!</p>
-                        <button className="w-full rounded p-2 bg-[#fbd0cc] text-white">View your cart</button>
+                        <button className="w-full rounded p-2 bg-[#fbd0cc] text-white" onClick={()=>router.push('/cart')}>View your cart</button>
                     </HoverCardContent>
                 </HoverCard>
             </div>
