@@ -15,3 +15,7 @@
     animation: grow 0.3s ease-in-out forwards;
   }
   
+  .active{
+    @apply
+      text-blue-600
+  }
