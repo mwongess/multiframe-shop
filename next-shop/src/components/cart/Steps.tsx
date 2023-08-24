@@ -4,7 +4,7 @@ import NavLink from "../NavLink"
 
 const Steps = () => {
   return (
-    <div className="flex justify-between mx-12 py-4 border-b-2 border-slate-300 mb-3 ">
+    <div className="flex justify-between px-8 py-1 bg border-b border-slate-300 mb-3 ">
       <NavLink href="/cart"><FaShoppingBag /> Cart</NavLink>
       <NavLink href="/cart/details"><FaInfoCircle />Delivery Details</NavLink>
       <NavLink href="/cart/payment"><FaCreditCard /> Payment</NavLink>

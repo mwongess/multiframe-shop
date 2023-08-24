@@ -14,13 +14,17 @@ import {
 const Navbar = () => {
     const router = useRouter()
     return (
-        <div className="flex items-center px-8 py-4 justify-between">
-            <div className="flex items-center gap-[2.5rem]">
+        <div className="flex items-center px-8 py-2 justify-between border-b border-slate-300 bg-[#e6e8ea]">
+            <div className="flex items-center gap-[2.5rem] w-[70%]">
                 <h1 className="font-bold text-2xl cursor-pointer" onClick={()=> router.push('/')}>DESIGNERSTORE</h1>
-                <div className="flex items-center  gap-6">
-                    <Link href="">🔥Women</Link>
+                <div className="flex items-center  gap-6 w-[90%]">
+                    
+                    <Link className="nowrap" href="">🔥Women</Link>
                     <Link href="">🤪Men</Link>
-                    <input className="bg-transparent p-3 rounded-lg" type="search" placeholder="Search for brands..." />
+                    <div className="w-[60%]">
+
+                    <input className="bg-white border border-slate-300 w-full py-1 px-3 rounded-full" type="search" placeholder="Search for brands..." />
+                    </div>
 
                 </div>
             </div>
