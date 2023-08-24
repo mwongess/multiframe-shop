@@ -3,7 +3,7 @@ import { FaTrashAlt } from "react-icons/fa"
 const SummaryProduct = () => {
     return (
         <div className="flex gap-3">
-            <p className="border border-white h-fit px-2 rounded-lg">1</p>
+            <p className="border border-slate-300  h-fit px-2 rounded-lg">1</p>
             <div>
                 <p className="font-bold">Lorem, ipsum dolor.</p>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt, ea?</p>

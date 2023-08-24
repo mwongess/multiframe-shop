@@ -4,7 +4,7 @@ import SummaryProductList from "./SummaryProductList"
 const Summary = () => {
   return (
     <div>
-        <h1 className="font-bold">Summary</h1>
+        <h1 className="font-bold text-lg">Summary</h1>
         <p className="flex items-center gap-2"><FaShoppingBag/>Designerstore</p>
         <p className="flex items-center gap-2"><FaRegClock/>Arrives in 1 to 2 days</p>
         <p className="flex items-center gap-2"><FaMapMarkerAlt/>Adress</p>

@@ -3,23 +3,27 @@ import Summary from './Summary'
 
 const DeliveryDetails = () => {
   return (
-    <div className='flex justify-between px-12'>
-      <div>
-        <h1>Delivery Details</h1>
-        <p>Delivery adress</p>
+    <div className='flex justify-between px-20 '>
+      <div className='w-1/2'>
+        <h1 className='font-bold text-lg'>Delivery Details</h1>
+        <p className='font-bold'>Delivery adress</p>
         <p>Add adress for this shipment</p>
         <form action="">
-          <div>
             <label htmlFor="">NAME</label>
-            <input type="text" name="" id="" />
-          </div>
           <div>
+            <input className='w-full border border-slate-300  rounded py-2 bg-transparent ' type="text" name="" id="" />
+          </div>
             <label htmlFor="">PHONE</label>
-            <input type="text" name="" id="" />
-          </div>
           <div>
+            <input className='w-full border border-slate-300  rounded py-2 bg-transparent ' type="text" name="" id="" />
+          </div>
             <label htmlFor="">POSTAL CODE</label>
-            <input type="text" name="" id="" />
+          <div>
+            <input className='w-full border border-slate-300 rounded py-2 bg-transparent ' type="text" name="" id="" />
+          </div>
+            <label htmlFor="">ADRESS</label>
+          <div>
+            <textarea className='w-full border border-slate-300  rounded py-2 bg-transparent ' name="" id="" cols={30} rows={4}></textarea>
           </div>
         </form>
       </div>
