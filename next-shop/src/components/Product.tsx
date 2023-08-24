@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 
 const Product = ({
@@ -9,12 +10,8 @@ const Product = ({
 }) => {
     return (
         <Link href="/readmore/1" className="bg-[#fefefe] rounded-lg cursor-pointer h-fit transform transition-transform hover:scale-110 hover:animate-pulse">
-            <div className="bg-white overflow-hidden">
-                <img
-                    className="w-full h-[200px] top-0 left-0 rounded-t-lg object-cover"
-                    src={product.image}
-                    alt="img"
-                />
+            <div className="bg-white relative h-[200px] overflow-hidden">
+               <Image src={product.image} objectFit="cover" fill priority alt={product.name}/>
             </div>
             <div className="p-3 h-[30%]">
                 <h1>{product.name}</h1>
