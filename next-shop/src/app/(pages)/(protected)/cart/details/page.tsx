@@ -1,9 +1,12 @@
+import DeliveryDetails from '@/components/deliverydetails/DeliveryDetails'
 import React from 'react'
 
-const DeliveryDetails = () => {
+const Details = () => {
   return (
-    <div>page</div>
+    <div>
+      <DeliveryDetails/>
+    </div>
   )
 }
 
-export default DeliveryDetails
+export default Details

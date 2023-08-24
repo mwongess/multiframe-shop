@@ -17,5 +17,5 @@
   
   .active{
     @apply
-      text-blue-600
+      text-[#fd6141]
   }

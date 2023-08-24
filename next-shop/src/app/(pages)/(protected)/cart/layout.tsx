@@ -3,7 +3,7 @@ import React from 'react'
 
 const CartLayout = ({children}: {children: React.ReactNode}) => {
     return (
-        <div className=''>
+        <div className='min-h-screen'>
             <Steps />
             {children}
         </div>

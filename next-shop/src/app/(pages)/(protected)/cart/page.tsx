@@ -5,7 +5,7 @@ import { FaLock } from "react-icons/fa"
 
 const Cart = () => {
   return (
-    <div className="flex gap-[4rem] px-[5rem] mt-5">
+    <div className="flex gap-[4rem] px-[5rem] mt-5 ">
       <ProductList />
       <div className="w-[30%]">
         <p className="font-bold mb-2">Pricing Details</p>
