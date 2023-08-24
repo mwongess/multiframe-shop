@@ -10,7 +10,7 @@ import { FaShoppingBag } from "react-icons/fa";
 
 const Readmore = ({ params }: { params: any }) => {
   return (
-    <div className="flex border-white justify-center p-8 gap-8 bg-white min-h-screen">
+    <div className="flex border-white justify-center p-8 gap-8 min-h-screen">
       <div className="w-[40%]">
         <img
           className="w-full object-cover"
@@ -33,7 +33,7 @@ const Readmore = ({ params }: { params: any }) => {
         </div>
       </div>
       <div className="w-[30%] h-fit">
-        <div className=" border-b bg-white">
+        <div className=" border-b ">
           <h1 className="font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
           <SizePicker />
         </div>
@@ -45,7 +45,7 @@ const Readmore = ({ params }: { params: any }) => {
         <SellerInfo />
       </div>
 
-      <div className="flex flex-col bg-[#fefefe] p-3 gap-3 w-[30%] h-fit">
+      <div className="flex flex-col  p-3 gap-3 w-[30%] h-fit">
         <p className="font-bold">Order</p>
         <div className="flex items-center gap-2">
           <img className="w-[3rem] h-[3rem]" src="https://image.kilimall.com/kenya/shop/store/goods/6070/2023/03/1678247207784c49f20bca4f04609bcdb898322ebba7f_720.jpg.webp" alt="" />

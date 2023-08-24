@@ -14,7 +14,7 @@ import {
 const Navbar = () => {
     const router = useRouter()
     return (
-        <div className="flex items-center px-8 py-4 border-b border-white justify-between">
+        <div className="flex items-center px-8 py-4 justify-between">
             <div className="flex items-center gap-[2.5rem]">
                 <h1 className="font-bold text-2xl cursor-pointer" onClick={()=> router.push('/')}>DESIGNERSTORE</h1>
                 <div className="flex items-center  gap-6">
@@ -53,7 +53,7 @@ const Navbar = () => {
                     </HoverCardTrigger>
                     <HoverCardContent>
                         <p>You have _ items in your cart!</p>
-                        <button className="w-full rounded p-2 bg-[#fbd0cc] text-white" onClick={()=>router.push('/cart')}>View your cart</button>
+                        <button className="w-full rounded p-2 bg-[#fd6141] text-white" onClick={()=>router.push('/cart')}>View your cart</button>
                     </HoverCardContent>
                 </HoverCard>
             </div>
