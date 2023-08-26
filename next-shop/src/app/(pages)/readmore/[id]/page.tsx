@@ -13,6 +13,8 @@ import Image from "next/image";
 
 const Readmore = ({ params }: { params: any }) => {
   const [clickedProduct, setClickedProduct] = useState<{ id: number; image: string; name: string; description: string; price: number } | null>(null)
+  const [quantity, setQuantity] = useState(1)
+  const [totalPrice, setTotalPrice] = useState<number>()
 
   const { products } = useProducts()
 
@@ -25,40 +27,41 @@ const Readmore = ({ params }: { params: any }) => {
 
   }, [])
 
-  console.log(clickedProduct);
+  useEffect(() => {
+    if (clickedProduct?.price) {
+      setTotalPrice(quantity * clickedProduct.price)
+    }
+  }, [quantity])
 
   return (
     <>
-    {
-      !clickedProduct?.image && <h1>Loading ...</h1>
-    }
+      {
+        !clickedProduct?.image && <h1>Loading ...</h1>
+      }
       {clickedProduct?.image && <div className="flex border-white justify-center p-8 gap-8 min-h-screen">
         <div className="w-[40%]">
-          <div className="w-full min-h-screen relative">
+          <div className="w-full min-h-screen relative block">
             <Image
               src={clickedProduct.image}
-              // objectFit="contain"
-              // width={100}
-              // height={100}
+              quality={100}
               fill
               priority
               alt="img"
+            // objectFit="fill"
             />
-              {/* <img className="w-full border" src={clickedProduct.image} alt="" /> */}
-
           </div>
-          <div className="grid grid-cols-4 gap-4  mt-3 border border-red-900">
-            <div className="">
-              <img className="w-full  rounded" src="https://image.kilimall.com/kenya/shop/store/goods/6070/2023/03/1678247207784c49f20bca4f04609bcdb898322ebba7f_720.jpg.webp" alt="" />
+          <div className="grid grid-cols-4 gap-4  mt-3  h-[100px]">
+            <div className="relative">
+              <Image className="w-full  rounded" src={clickedProduct.image} quality={100} objectFit="fill" fill alt="" />
             </div>
-            <div>
-              <img className="w-full  rounded" src="https://image.kilimall.com/kenya/shop/store/goods/6070/2023/03/1678247207784c49f20bca4f04609bcdb898322ebba7f_720.jpg.webp" alt="" />
+            <div className="relative">
+              <Image className="w-full  rounded" src={clickedProduct.image} quality={100} fill alt="" />
             </div>
-            <div>
-              <img className="w-full rounded" src="https://image.kilimall.com/kenya/shop/store/goods/6070/2023/03/1678247207784c49f20bca4f04609bcdb898322ebba7f_720.jpg.webp" alt="" />
+            <div className="relative">
+              <Image className="w-full  rounded" src={clickedProduct.image} quality={100} fill alt="" />
             </div>
-            <div>
-              <img className="w-full  rounded" src="https://image.kilimall.com/kenya/shop/store/goods/6070/2023/03/1678247207784c49f20bca4f04609bcdb898322ebba7f_720.jpg.webp" alt="" />
+            <div className="relative">
+              <Image className="w-full  rounded" src={clickedProduct.image} quality={100} fill alt="" />
             </div>
           </div>
         </div>
@@ -78,16 +81,19 @@ const Readmore = ({ params }: { params: any }) => {
         <div className="flex flex-col  p-3 gap-3 w-[30%] h-fit">
           <p className="font-bold">Order</p>
           <div className="flex items-center gap-2">
-            <img className="w-[3rem] h-[3rem]" src="https://image.kilimall.com/kenya/shop/store/goods/6070/2023/03/1678247207784c49f20bca4f04609bcdb898322ebba7f_720.jpg.webp" alt="" />
+            <div className="relative w-[3rem] h-[3rem]">
+
+              <Image src={clickedProduct.image} fill alt="" />
+            </div>
             <div>
               <p>Selected Sum</p>
               <h1 className="font-bold">XL(XL)</h1>
             </div>
           </div>
-          <QuantityAdjuster />
+          <QuantityAdjuster stock={5} quantity={quantity} setQuantity={setQuantity} />
           <div className="flex justify-between">
             <h1>Total price</h1>
-            <p className="font-bold">$45.00</p>
+            <p className="font-bold">$ {totalPrice || clickedProduct.price}</p>
           </div>
           <button className="bg-[#fd6141] text-white p-3">Buy Now</button>
           <button className="flex justify-center items-center gap-3 border border-[#fd6141] text-[#fd6141] p-3">
