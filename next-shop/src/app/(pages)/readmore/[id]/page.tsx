@@ -6,66 +6,97 @@ import QuantityAdjuster from "@/components/QuantityAdjuster";
 import SellerInfo from "@/components/SellerInfo";
 import ShippingInfo from "@/components/ShippingInfo";
 import SizePicker from "@/components/SizePicker";
+import { useProducts } from "@/context/productsContext";
+import { useEffect, useState } from "react";
 import { FaShoppingBag } from "react-icons/fa";
+import Image from "next/image";
 
 const Readmore = ({ params }: { params: any }) => {
+  const [clickedProduct, setClickedProduct] = useState<{ id: number; image: string; name: string; description: string; price: number } | null>(null)
+
+  const { products } = useProducts()
+
+  console.log(params);
+  useEffect(() => {
+    setClickedProduct(
+
+      products.find((product) => product.id == params.id)
+    )
+
+  }, [])
+
+  console.log(clickedProduct);
+
   return (
-    <div className="flex border-white justify-center p-8 gap-8 min-h-screen">
-      <div className="w-[40%]">
-        <img
-          className="w-full object-cover"
-          src="https://image.kilimall.com/kenya/shop/store/goods/6070/2023/03/1678247207784c49f20bca4f04609bcdb898322ebba7f_720.jpg.webp"
-          alt="img"
-        />
-        <div className="grid grid-cols-4 gap-4  mt-3">
-          <div className="">
-            <img className="w-full rounded" src="https://image.kilimall.com/kenya/shop/store/goods/6070/2023/03/1678247207784c49f20bca4f04609bcdb898322ebba7f_720.jpg.webp" alt="" />
-          </div>
-          <div>
-            <img className="w-full  rounded" src="https://image.kilimall.com/kenya/shop/store/goods/6070/2023/03/1678247207784c49f20bca4f04609bcdb898322ebba7f_720.jpg.webp" alt="" />
-          </div>
-          <div>
-            <img className="w-full rounded" src="https://image.kilimall.com/kenya/shop/store/goods/6070/2023/03/1678247207784c49f20bca4f04609bcdb898322ebba7f_720.jpg.webp" alt="" />
-          </div>
-          <div>
-            <img className="w-full  rounded" src="https://image.kilimall.com/kenya/shop/store/goods/6070/2023/03/1678247207784c49f20bca4f04609bcdb898322ebba7f_720.jpg.webp" alt="" />
-          </div>
-        </div>
-      </div>
-      <div className="w-[30%] h-fit">
-        <div className=" border-b ">
-          <h1 className="font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
-          <SizePicker />
-        </div>
-        <AboutItem />
+    <>
+    {
+      !clickedProduct?.image && <h1>Loading ...</h1>
+    }
+      {clickedProduct?.image && <div className="flex border-white justify-center p-8 gap-8 min-h-screen">
+        <div className="w-[40%]">
+          <div className="w-full min-h-screen relative">
+            <Image
+              src={clickedProduct.image}
+              // objectFit="contain"
+              // width={100}
+              // height={100}
+              fill
+              priority
+              alt="img"
+            />
+              {/* <img className="w-full border" src={clickedProduct.image} alt="" /> */}
 
-        <h1 className="mt-4 font-bold">Description</h1>
-        <Description />
-        <ShippingInfo />
-        <SellerInfo />
-      </div>
-
-      <div className="flex flex-col  p-3 gap-3 w-[30%] h-fit">
-        <p className="font-bold">Order</p>
-        <div className="flex items-center gap-2">
-          <img className="w-[3rem] h-[3rem]" src="https://image.kilimall.com/kenya/shop/store/goods/6070/2023/03/1678247207784c49f20bca4f04609bcdb898322ebba7f_720.jpg.webp" alt="" />
-          <div>
-            <p>Selected Sum</p>
-            <h1 className="font-bold">XL(XL)</h1>
+          </div>
+          <div className="grid grid-cols-4 gap-4  mt-3 border border-red-900">
+            <div className="">
+              <img className="w-full  rounded" src="https://image.kilimall.com/kenya/shop/store/goods/6070/2023/03/1678247207784c49f20bca4f04609bcdb898322ebba7f_720.jpg.webp" alt="" />
+            </div>
+            <div>
+              <img className="w-full  rounded" src="https://image.kilimall.com/kenya/shop/store/goods/6070/2023/03/1678247207784c49f20bca4f04609bcdb898322ebba7f_720.jpg.webp" alt="" />
+            </div>
+            <div>
+              <img className="w-full rounded" src="https://image.kilimall.com/kenya/shop/store/goods/6070/2023/03/1678247207784c49f20bca4f04609bcdb898322ebba7f_720.jpg.webp" alt="" />
+            </div>
+            <div>
+              <img className="w-full  rounded" src="https://image.kilimall.com/kenya/shop/store/goods/6070/2023/03/1678247207784c49f20bca4f04609bcdb898322ebba7f_720.jpg.webp" alt="" />
+            </div>
           </div>
         </div>
-        <QuantityAdjuster />
-        <div className="flex justify-between">
-          <h1>Total price</h1>
-          <p className="font-bold">$45.00</p>
+        <div className="w-[30%] h-fit">
+          <div className=" border-b ">
+            <h1 className="font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+            <SizePicker />
+          </div>
+          <AboutItem />
+
+          <h1 className="mt-4 font-bold">Description</h1>
+          <Description />
+          <ShippingInfo />
+          <SellerInfo />
         </div>
-        <button className="bg-[#fd6141] text-white p-3">Buy Now</button>
-        <button className="flex justify-center items-center gap-3 border border-[#fd6141] text-[#fd6141] p-3">
-          <FaShoppingBag />
-          Add To Bag
-        </button>
-      </div>
-    </div>
+
+        <div className="flex flex-col  p-3 gap-3 w-[30%] h-fit">
+          <p className="font-bold">Order</p>
+          <div className="flex items-center gap-2">
+            <img className="w-[3rem] h-[3rem]" src="https://image.kilimall.com/kenya/shop/store/goods/6070/2023/03/1678247207784c49f20bca4f04609bcdb898322ebba7f_720.jpg.webp" alt="" />
+            <div>
+              <p>Selected Sum</p>
+              <h1 className="font-bold">XL(XL)</h1>
+            </div>
+          </div>
+          <QuantityAdjuster />
+          <div className="flex justify-between">
+            <h1>Total price</h1>
+            <p className="font-bold">$45.00</p>
+          </div>
+          <button className="bg-[#fd6141] text-white p-3">Buy Now</button>
+          <button className="flex justify-center items-center gap-3 border border-[#fd6141] text-[#fd6141] p-3">
+            <FaShoppingBag />
+            Add To Bag
+          </button>
+        </div>
+      </div>}
+    </>
   );
 };
 
