@@ -1,4 +1,3 @@
-import Navbar from "@/components/Navbar";
 import "./globals.css";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -19,7 +18,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className + " 2xl:flex 2xl:justify-center "}>
         <div className="2xl:w-[55vw]">
-          <Navbar/>
           {children}
         </div>
       </body>
