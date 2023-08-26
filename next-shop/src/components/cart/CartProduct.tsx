@@ -11,7 +11,7 @@ const CartProduct = () => {
           <p>Ksh 200</p>
         </div>
         <p className="flex items-center gap-2"><FaCarSide/>2 days delivery time</p>
-        <button className="flex items-center gap-2 mt-1 rounded p-2 bg-slate-300"><FaTrashAlt/> Remove</button>
+        <button className="flex items-center gap-2 mt-1 rounded p-2 bg-slate-200"><FaTrashAlt/> Remove</button>
       </div>
     </div>
   )
