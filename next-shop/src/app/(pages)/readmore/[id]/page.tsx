@@ -13,6 +13,8 @@ import Image from "next/image";
 
 const Readmore = ({ params }: { params: any }) => {
   const [clickedProduct, setClickedProduct] = useState<{ id: number; image: string; name: string; description: string; price: number } | null>(null)
+  const [quantity, setQuantity] = useState(1)
+  const [totalPrice, setTotalPrice] = useState<number>()
 
   const { products } = useProducts()
 
@@ -25,7 +27,11 @@ const Readmore = ({ params }: { params: any }) => {
 
   }, [])
 
-  console.log(clickedProduct);
+  useEffect(() => {
+    if (clickedProduct?.price) {
+      setTotalPrice(quantity * clickedProduct.price)
+    }
+  }, [quantity])
 
   return (
     <>
@@ -84,10 +90,10 @@ const Readmore = ({ params }: { params: any }) => {
               <h1 className="font-bold">XL(XL)</h1>
             </div>
           </div>
-          <QuantityAdjuster />
+          <QuantityAdjuster stock={5} quantity={quantity} setQuantity={setQuantity} />
           <div className="flex justify-between">
             <h1>Total price</h1>
-            <p className="font-bold">$45.00</p>
+            <p className="font-bold">$ {totalPrice || clickedProduct.price}</p>
           </div>
           <button className="bg-[#fd6141] text-white p-3">Buy Now</button>
           <button className="flex justify-center items-center gap-3 border border-[#fd6141] text-[#fd6141] p-3">
