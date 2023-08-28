@@ -5,7 +5,8 @@ import { useProducts } from "@/context/productsContext";
 import { useEffect } from "react";
 
 const Products = () => {
- const {products } = useProducts()
+ const {products } = useProducts()!
+ 
  useEffect(()=>{
   console.log(products);
   
