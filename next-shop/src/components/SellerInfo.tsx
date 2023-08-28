@@ -7,9 +7,9 @@ const SellerInfo = () => {
                     <img className="h-full w-full" src="/amiri.png" alt="" />
                 </div>
                 <div>
-                    <h1 className="font-bold">D3signer Stor3</h1>
+                    <h1 className="font-bold">Designer Store</h1>
                     <p>Active 5 secs ago!</p>
-                    <button className="border rounded-lg w-full p-2">Visit Store</button>
+                    {/* <button className="border rounded-lg w-full p-2">Visit Store</button> */}
                 </div>
 
             </div>

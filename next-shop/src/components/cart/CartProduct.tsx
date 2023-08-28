@@ -18,7 +18,7 @@ const CartProduct = ({ item }: { item: any }) => {
       <div className="w-full">
         <div className="flex justify-between">
           <p >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non, culpa?</p>
-          <p>{item.price}</p>
+          <p className="font-bold">Ksh {item.price}</p>
         </div>
         <p className="flex items-center gap-2"><FaCarSide />2 days delivery time</p>
         <button onClick={() => removeFromCart(item.cartId)} className="flex items-center gap-2 mt-1 rounded p-2 bg-slate-200"><FaTrashAlt /> Remove</button>

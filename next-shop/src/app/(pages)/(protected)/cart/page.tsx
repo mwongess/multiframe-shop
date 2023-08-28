@@ -27,7 +27,7 @@ const Cart = () => {
 
   return (
     <>
-      <div className="flex gap-[4rem] px-[5rem] mt-5 ">
+      <div className="flex gap-[4rem] px-8 mt-5">
         <ProductList />
         <div className="w-[30%]">
           <p className="font-bold mb-2">Pricing Details</p>
