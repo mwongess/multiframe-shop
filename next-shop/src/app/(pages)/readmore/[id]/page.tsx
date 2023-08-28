@@ -10,6 +10,7 @@ import { useProducts } from "@/context/productsContext";
 import { useEffect, useState } from "react";
 import { FaShoppingBag } from "react-icons/fa";
 import Image from "next/image";
+import DetailsLoadingSkeleton from "@/components/DetailsLoadingSkeleton";
 
 const Readmore = ({ params }: { params: any }) => {
   const [clickedProduct, setClickedProduct] = useState<{ id: number; image: string; name: string; description: string; price: number } | null>(null)
@@ -36,7 +37,7 @@ const Readmore = ({ params }: { params: any }) => {
   return (
     <>
       {
-        !clickedProduct?.image && <h1>Loading ...</h1>
+        !clickedProduct?.image && <DetailsLoadingSkeleton/>
       }
       {clickedProduct?.image && <div className="flex border-white justify-center p-8 gap-8 min-h-screen">
         <div className="w-[40%]">
