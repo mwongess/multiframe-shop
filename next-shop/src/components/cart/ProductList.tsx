@@ -7,8 +7,10 @@ const ProductList = () => {
   return (
     <div className="w-[70%]">
       {
-        cart.map((item)=> (
-          <CartProduct item={item}/>
+        cart.map((item,index)=> (
+          <div key={index}>
+            <CartProduct item={item}/>
+          </div>
         ))
       }
     </div>

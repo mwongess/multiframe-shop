@@ -2,6 +2,7 @@
 
 import { cart as fromCart } from '@/_data/cart';
 import { products as fromData} from '@/_data/products';
+import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import { Iproduct, ProductsProvider } from '@/context/productsContext';
 import React, { useState } from 'react'
@@ -18,6 +19,7 @@ const ProtectedLayout = ({
         <ProductsProvider value={{ products, cart, setCart }}>
             <Navbar />
             {children}
+            <Footer/>
         </ProductsProvider>
     )
 }
