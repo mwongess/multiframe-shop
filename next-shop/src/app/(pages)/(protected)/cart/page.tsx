@@ -14,8 +14,10 @@ const Cart = () => {
   useEffect(()=>{
     if(cart[0]){
       setSubtotal(cart.reduce((total, currItem)=> total + currItem.price,0))
+    }else{
+      setSubtotal(0)
     }
-  },[])
+  },[cart])
 
 
   return (
