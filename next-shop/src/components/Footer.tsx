@@ -8,7 +8,7 @@ const Footer = () => {
         <p className='font-bold text-2xl'>
           Collections!
         </p>
-        <div className='grid grid-cols-4 mt-2 footer-links'>
+        <div className='grid grid-cols-5 mt-2 footer-links'>
           <div className='flex flex-col'>
             <Link href="">Amiri</Link>
             <Link href="">Bottega</Link>
@@ -36,6 +36,12 @@ const Footer = () => {
             <Link href="">Dior</Link>
             <Link href="">Fendi</Link>
             <Link href="">Lacoste</Link>
+          </div>
+          <div className='flex flex-col'>
+            <h1 className='font-bold'>Useful Links</h1>
+            <Link href="/aut/login">Login</Link>
+            <Link href="/auth/signup">Signup</Link>
+            <Link href="https://www.github.com/mwongess" target='_blank'>My Portfolio</Link>
           </div>
         </div>
       </div>
