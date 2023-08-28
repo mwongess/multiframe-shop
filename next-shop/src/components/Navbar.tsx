@@ -9,9 +9,20 @@ import {
     HoverCardContent,
     HoverCardTrigger,
 } from "@/components/ui/hover-card"
+import { useProducts } from "@/context/productsContext";
+import { useEffect, useState } from "react";
 
 
 const Navbar = () => {
+    const [cartItemsCount, setCartItemsCount] = useState<number>()
+
+    // From context
+    const {cart} = useProducts()!
+    
+    useEffect(()=>{
+        setCartItemsCount(cart.length)
+    },[cart])
+
     const router = useRouter()
     return (
         <div className="flex items-center px-8 py-2 justify-between border-b border-slate-300 bg-[#e6e8ea]">
@@ -56,7 +67,7 @@ const Navbar = () => {
                         </div>
                     </HoverCardTrigger>
                     <HoverCardContent>
-                        <p>You have _ items in your cart!</p>
+                        <p>You have {cartItemsCount} item(s) in your cart!</p>
                         <button className="w-full rounded p-2 bg-[#fd6141] text-white" onClick={()=>router.push('/cart')}>View your cart</button>
                     </HoverCardContent>
                 </HoverCard>
