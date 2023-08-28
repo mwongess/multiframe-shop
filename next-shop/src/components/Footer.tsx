@@ -41,7 +41,7 @@ const Footer = () => {
       </div>
       <div className='flex justify-between py-8 px-[3rem] border-t border-slate-300'>
         <p>Copyright DesignerStore.All Rights Reserved</p>
-        <p>Designed by <span className='underline'>Amos Mwongela</span></p>
+        <p>Made with ❤️ by <Link className='underline' href="https://www.github.com/mwongess" target='_blank'>Amos Mwongela</Link></p>
       </div>
     </div>
   )
