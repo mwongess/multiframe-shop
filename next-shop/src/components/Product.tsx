@@ -1,15 +1,16 @@
 "use client";
 
+import { Iproduct } from "@/context/productsContext";
 import Image from "next/image";
 import Link from "next/link";
 
 const Product = ({
     product,
 }: {
-    product: { id: number; image: string; name: string; description: string; price: number };
+    product: Iproduct;
 }) => {
     return (
-            <Link href={`/readmore/${product.id}`} className="bg-[#fefefe] rounded-lg cursor-pointer h-fit transform transition-transform hover:scale-110 hover:animate-pulse">
+            <Link href={`/products/details/${product.id}`} className="bg-[#fefefe] rounded-lg cursor-pointer h-fit transform transition-transform hover:scale-110 hover:animate-pulse">
                 <div className="bg-white relative h-[200px] overflow-hidden">
                     <Image src={product.image} objectFit="cover" fill priority alt={product.name} />
                 </div>

@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@radix-ui/react-hover-card": "^1.0.6",
+    "@radix-ui/react-toast": "^1.1.4",
     "@reduxjs/toolkit": "^1.9.5",
     "@stripe/react-stripe-js": "^2.1.2",
     "@stripe/stripe-js": "^2.1.0",

@@ -6,23 +6,25 @@ import QuantityAdjuster from "@/components/QuantityAdjuster";
 import SellerInfo from "@/components/SellerInfo";
 import ShippingInfo from "@/components/ShippingInfo";
 import SizePicker from "@/components/SizePicker";
-import { useProducts } from "@/context/productsContext";
+import { Iproduct, useProducts } from "@/context/productsContext";
 import { useEffect, useState } from "react";
 import { FaShoppingBag } from "react-icons/fa";
 import Image from "next/image";
 import DetailsLoadingSkeleton from "@/components/DetailsLoadingSkeleton";
+import { useToast } from "@/components/ui/use-toast"
+import { ToastAction } from "@/components/ui/toast";
 
 const Readmore = ({ params }: { params: any }) => {
-  const [clickedProduct, setClickedProduct] = useState<{ id: number; image: string; name: string; description: string; price: number } | null>(null)
+  const [clickedProduct, setClickedProduct] = useState<Iproduct | null>(null)
   const [quantity, setQuantity] = useState(1)
   const [totalPrice, setTotalPrice] = useState<number>()
 
-  const { products } = useProducts()
+  const { toast } = useToast()
 
-  console.log(params);
+  const { products, cart, setCart } = useProducts()!
+
   useEffect(() => {
     setClickedProduct(
-
       products.find((product) => product.id == params.id)
     )
 
@@ -34,10 +36,20 @@ const Readmore = ({ params }: { params: any }) => {
     }
   }, [quantity])
 
+  // Add to cart
+  const addToBag = () => {
+    setCart(prevItems => [...prevItems,{cartId: Date.now(), ...clickedProduct!}])
+    toast({
+      title: `${clickedProduct?.name} added to cart!`,
+      // description: `${clickedProduct?.description}`,
+      action: (<ToastAction altText="Remove from cart!">Undo</ToastAction>)
+    })
+  }
+
   return (
     <>
       {
-        !clickedProduct?.image && <DetailsLoadingSkeleton/>
+        !clickedProduct?.image && <DetailsLoadingSkeleton />
       }
       {clickedProduct?.image && <div className="flex border-white justify-center p-8 gap-8 min-h-screen">
         <div className="w-[40%]">
@@ -97,7 +109,7 @@ const Readmore = ({ params }: { params: any }) => {
             <p className="font-bold">$ {totalPrice || clickedProduct.price}</p>
           </div>
           <button className="bg-[#fd6141] text-white p-3">Buy Now</button>
-          <button className="flex justify-center items-center gap-3 border border-[#fd6141] text-[#fd6141] p-3">
+          <button onClick={addToBag} className="flex justify-center items-center gap-3 border border-[#fd6141] text-[#fd6141] p-3">
             <FaShoppingBag />
             Add To Bag
           </button>
