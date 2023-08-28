@@ -1,14 +1,12 @@
 import { FaCarSide, FaTrashAlt } from "react-icons/fa"
+import {useProducts } from "@/context/productsContext"
 import ProductImage from "./ProductImage"
-import { Iproduct, useProducts } from "@/context/productsContext"
 
-const CartProduct = ({item}: {item: Iproduct}) => {
+const CartProduct = ({item}: {item: any}) => {
   const {cart, setCart} = useProducts()!
 
   const removeFromCart = (id:number) =>{
-    // const itemIndex = cart.findIndex(item => item.id == id)
-    // setCart(cart.splice(1,itemIndex))
-    setCart(cart.filter((item)=>item.id != id));
+    setCart(cart.filter((item)=>item.cartId != id));
     
   }
 
@@ -21,7 +19,7 @@ const CartProduct = ({item}: {item: Iproduct}) => {
           <p>{item.price}</p>
         </div>
         <p className="flex items-center gap-2"><FaCarSide/>2 days delivery time</p>
-        <button onClick={()=> removeFromCart(item.id)} className="flex items-center gap-2 mt-1 rounded p-2 bg-slate-200"><FaTrashAlt/> Remove</button>
+        <button onClick={()=> removeFromCart(item.cartId)} className="flex items-center gap-2 mt-1 rounded p-2 bg-slate-200"><FaTrashAlt/> Remove</button>
       </div>
     </div>
   )

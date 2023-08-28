@@ -36,8 +36,9 @@ const Readmore = ({ params }: { params: any }) => {
     }
   }, [quantity])
 
+  // Add to cart
   const addToBag = () => {
-    setCart(prevItems => [...prevItems, clickedProduct!])
+    setCart(prevItems => [...prevItems,{cartId: Date.now(), ...clickedProduct!}])
     toast({
       title: `${clickedProduct?.name} added to cart!`,
       // description: `${clickedProduct?.description}`,
