@@ -19,7 +19,10 @@ const Cart = () => {
     }
   },[cart])
 
-
+  if (!cart[0]) {
+    return <h1>Get started</h1>
+  }
+  
   return (
     <div className="flex gap-[4rem] px-[5rem] mt-5 ">
       <ProductList />
