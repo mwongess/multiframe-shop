@@ -53,7 +53,7 @@ const Readmore = ({ params }: { params: any }) => {
       }
       {clickedProduct?.image && <div className="flex border-white justify-center p-8 gap-8 min-h-screen">
         <div className="w-[40%]">
-          <div className="w-full min-h-screen relative block">
+          <div className="w-full h-[500px] relative block">
             <Image
               src={clickedProduct.image}
               quality={100}
