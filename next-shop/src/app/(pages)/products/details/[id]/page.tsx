@@ -13,6 +13,7 @@ import Image from "next/image";
 import DetailsLoadingSkeleton from "@/components/DetailsLoadingSkeleton";
 import { useToast } from "@/components/ui/use-toast"
 import { ToastAction } from "@/components/ui/toast";
+import Products from "../../page";
 
 const Readmore = ({ params }: { params: any }) => {
   const [clickedProduct, setClickedProduct] = useState<Iproduct | null>(null)
@@ -63,7 +64,7 @@ const Readmore = ({ params }: { params: any }) => {
             // objectFit="fill"
             />
           </div>
-          <div className="grid grid-cols-4 gap-4  mt-3  h-[100px]">
+          <div className="grid grid-cols-4 gap-4  mt-3 h-[80px]  sm:h-[100px]">
             <div className="relative">
               <Image className="w-full  rounded" src={clickedProduct.image} quality={100} objectFit="fill" fill alt="" />
             </div>
@@ -91,7 +92,7 @@ const Readmore = ({ params }: { params: any }) => {
           <SellerInfo />
         </div>
 
-        <div className="flex flex-col  p-3 gap-3 sm:w-[30%] h-fit">
+        <div className="flex flex-col  sm:p-3 gap-3 sm:w-[30%] h-fit">
           <p className="font-bold">Order</p>
           <div className="flex items-center gap-2">
             <div className="relative w-[3rem] h-[3rem]">
@@ -114,7 +115,10 @@ const Readmore = ({ params }: { params: any }) => {
             Add To Bag
           </button>
         </div>
-      </div>}
+      </div>
+      
+      }
+      <Products/>
     </>
   );
 };
