@@ -2,13 +2,13 @@ import React from 'react'
 
 const DetailsLoadingSkeleton = () => {
     return (
-        <div className="flex border-white justify-center p-8 gap-8 min-h-screen">
-            <div className="w-[40%]">
+        <div className="flex flex-col sm:flex-row border-white justify-center p-8 gap-8 min-h-screen">
+            <div className="sm:w-[40%]">
                 {/* Loading skeleton for the main image */}
-                <div className="w-full h-[400px] bg-gray-300 animate-pulse" />
+                <div className="w-full h-[350px] sm:h-[500px] bg-gray-300 animate-pulse" />
 
                 {/* Loading skeleton for the grid of images */}
-                <div className="grid grid-cols-4 gap-4 mt-3 h-[100px]">
+                <div className="grid grid-cols-4 gap-4 mt-3 h-[80px] sm:h-[100px]">
                     {Array.from({ length: 4 }).map((_, index) => (
                         <div
                             key={index}
@@ -18,7 +18,7 @@ const DetailsLoadingSkeleton = () => {
                 </div>
             </div>
 
-            <div className="w-[30%] h-fit">
+            <div className="sm:w-[30%] h-fit">
                 {/* Loading skeleton for title */}
                 <h1 className="font-bold text-transparent bg-gray-300 rounded">Title</h1>
                 {/* Rest of the loading skeletons */}
@@ -26,7 +26,7 @@ const DetailsLoadingSkeleton = () => {
                 <h1 className="font-bold text-transparent w-[4rem] bg-gray-300 rounded mt-[1rem]">Title</h1>
             </div>
 
-            <div className="flex flex-col p-3 gap-3 w-[30%] h-fit">
+            <div className="flex flex-col sm:p-3 gap-3 sm:w-[30%] h-fit">
                 <p className="font-bold bg-gray-300 animate-pulse w-[4rem] h-[1.5rem] rounded"></p>
                 <div className='flex gap-2'>
                     <div className='bg-gray-300 animate-pulse rounded w-1/2 h-[4rem]'></div>

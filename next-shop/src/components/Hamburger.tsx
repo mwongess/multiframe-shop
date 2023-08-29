@@ -7,9 +7,9 @@ import {
     SheetTitle,
     SheetTrigger,
 } from "@/components/ui/sheet"
-import Link from "next/link"
 
-import { FaHamburger } from "react-icons/fa"
+import { FaHamburger, FaHome, FaShoppingBag, FaTruck, FaUserCheck } from "react-icons/fa"
+import Link from "next/link"
 
 const Hamburger = () => {
     return (
@@ -20,19 +20,19 @@ const Hamburger = () => {
                 </p>
             </SheetTrigger>
             <SheetContent>
-                <SheetTitle>The Designer Store !</SheetTitle>
+                <SheetTitle>Latest Clothes Store !</SheetTitle>
                 <div className="grid gap-4 py-4">
                     <SheetClose asChild>
-                        <Link href="/">Home</Link>
+                        <Link className="flex items-center gap-2" href="/"><FaHome/> Home</Link>
                     </SheetClose>
                     <SheetClose asChild>
-                        <Link href="/cart">Cart</Link>
+                        <Link className="flex items-center gap-2" href="/cart"><FaShoppingBag/> Cart</Link>
                     </SheetClose>
                     <SheetClose asChild>
-                        <Link href="">Orders</Link>
+                        <Link className="flex items-center gap-2" href=""><FaTruck/> Orders</Link>
                     </SheetClose>
                     <SheetClose asChild>
-                        <Link href="">Account</Link>
+                        <Link className="flex items-center gap-2" href=""><FaUserCheck/> Account</Link>
                     </SheetClose>
                 </div>
             </SheetContent>

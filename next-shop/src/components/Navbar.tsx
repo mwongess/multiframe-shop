@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { FaRegUser, FaAngleDown, FaShoppingBag, FaHamburger } from "react-icons/fa";
+import { FaRegUser, FaAngleDown, FaShoppingBag} from "react-icons/fa";
 import { useRouter } from 'next/navigation'
 
 import { useProducts } from "@/context/productsContext";
@@ -26,7 +26,7 @@ const Navbar = () => {
 
     const router = useRouter()
     return (
-        <div className="flex items-center px-4 sm:px-8 py-2 justify-between border-b border-slate-300 bg-[#e6e8ea]">
+        <div className="flex items-center px-4 sm:px-8 py-3 sm:py-2 justify-between border-b border-slate-300 bg-[#e6e8ea]">
             <div className="flex items-center gap-[2.5rem] w-[70%]">
                 <h1 className="font-bold text-xl sm:text-2xl cursor-pointer" onClick={() => router.push('/')}>DESIGNERSTORE</h1>
                 <div className="hidden sm:flex items-center  gap-6 w-[90%]">
