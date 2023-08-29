@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { FaRegUser, FaAngleDown, FaShoppingBag} from "react-icons/fa";
+import { FaRegUser, FaAngleDown, FaShoppingBag, FaGithub } from "react-icons/fa";
 import { useRouter } from 'next/navigation'
 
 import { useProducts } from "@/context/productsContext";
@@ -28,7 +28,7 @@ const Navbar = () => {
     return (
         <div className="flex items-center px-4 sm:px-8 py-3 sm:py-2 justify-between border-b border-slate-300 bg-[#e6e8ea]">
             <div className="flex items-center gap-[2.5rem] w-[70%]">
-                <h1 className="font-bold text-xl sm:text-2xl cursor-pointer" onClick={() => router.push('/')}>DESIGNERSTORE</h1>
+                <h1 className="font-bold text-xl sm:text-2xl cursor-pointer select-none" onClick={() => router.push('/')}>DESIGNERSTORE</h1>
                 <div className="hidden sm:flex items-center  gap-6 w-[90%]">
 
                     <Link className="nowrap" href="">🔥Women</Link>
@@ -41,6 +41,7 @@ const Navbar = () => {
                 </div>
             </div>
             <div className="hidden sm:flex items-center gap-6 ">
+                    <Link className="flex items-center gap-2" href="https://github.com/mwongess/multiframe-shop" target="_blank"><FaGithub /> Github</Link>
                 {/* Hover Card */}
                 <HoverCard>
                     <HoverCardTrigger>
@@ -74,7 +75,7 @@ const Navbar = () => {
                 </HoverCard>
             </div>
             <div className="block sm:hidden">
-                <Hamburger/>
+                <Hamburger />
             </div>
         </div>
     )
