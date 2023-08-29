@@ -5,7 +5,7 @@ const DetailsLoadingSkeleton = () => {
         <div className="flex border-white justify-center p-8 gap-8 min-h-screen">
             <div className="w-[40%]">
                 {/* Loading skeleton for the main image */}
-                <div className="w-full min-h-screen bg-gray-300 animate-pulse" />
+                <div className="w-full h-[400px] bg-gray-300 animate-pulse" />
 
                 {/* Loading skeleton for the grid of images */}
                 <div className="grid grid-cols-4 gap-4 mt-3 h-[100px]">

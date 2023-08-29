@@ -51,9 +51,9 @@ const Readmore = ({ params }: { params: any }) => {
       {
         !clickedProduct?.image && <DetailsLoadingSkeleton />
       }
-      {clickedProduct?.image && <div className="flex border-white justify-center p-8 gap-8 min-h-screen">
-        <div className="w-[40%]">
-          <div className="w-full min-h-screen relative block">
+      {clickedProduct?.image && <div className="flex flex-col sm:flex-row  border-white justify-center p-8 gap-8 min-h-screen">
+        <div className="sm:w-[40%]">
+          <div className="w-full h-[350px] sm:h-[500px] relative block">
             <Image
               src={clickedProduct.image}
               quality={100}
@@ -78,7 +78,7 @@ const Readmore = ({ params }: { params: any }) => {
             </div>
           </div>
         </div>
-        <div className="w-[30%] h-fit">
+        <div className="sm:w-[30%] h-fit">
           <div className=" border-b ">
             <h1 className="font-bold">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
             <SizePicker />
@@ -91,7 +91,7 @@ const Readmore = ({ params }: { params: any }) => {
           <SellerInfo />
         </div>
 
-        <div className="flex flex-col  p-3 gap-3 w-[30%] h-fit">
+        <div className="flex flex-col  p-3 gap-3 sm:w-[30%] h-fit">
           <p className="font-bold">Order</p>
           <div className="flex items-center gap-2">
             <div className="relative w-[3rem] h-[3rem]">

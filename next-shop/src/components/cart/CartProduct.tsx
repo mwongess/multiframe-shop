@@ -13,10 +13,10 @@ const CartProduct = ({ item }: { item: any }) => {
  
 
   return (
-    <div className="flex gap-3 mb-3 border-b pb-2">
+    <div className="flex justify-between gap-3 mb-3 border-b pb-2">
       <ProductImage url={item.image} />
-      <div className="w-full">
-        <div className="flex justify-between">
+      <div className="w-full px-4">
+        <div className="sm:flex justify-between ">
           <p >Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non, culpa?</p>
           <p className="font-bold">Ksh {item.price}</p>
         </div>
