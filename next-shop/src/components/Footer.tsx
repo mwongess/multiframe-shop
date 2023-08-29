@@ -4,11 +4,11 @@ import React from 'react'
 const Footer = () => {
   return (
     <div className='bg-slate-200'>
-      <div className='p-[3rem]'>
+      <div className='p-4 sm:p-[3rem]'>
         <p className='font-bold text-2xl'>
           Collections!
         </p>
-        <div className='grid grid-cols-5 mt-2 footer-links'>
+        <div className='grid gap-2 grid-cols-2  sm:grid-cols-5 mt-2 footer-links'>
           <div className='flex flex-col'>
             <Link href="">Amiri</Link>
             <Link href="">Bottega</Link>
@@ -45,7 +45,7 @@ const Footer = () => {
           </div>
         </div>
       </div>
-      <div className='flex justify-between py-8 px-[3rem] border-t border-slate-300'>
+      <div className='flex flex-col text-center sm:text-inherit  items-center justify-center sm:justify-between py-8 sm:px-[3rem] border-t border-slate-300'>
         <p>Copyright DesignerStore.All Rights Reserved</p>
         <p>Made with ❤️ by <Link className='underline' href="https://www.github.com/mwongess" target='_blank'>Amos Mwongela</Link></p>
       </div>

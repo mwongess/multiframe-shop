@@ -13,8 +13,7 @@ const Products = () => {
  },[])
 
   return (
-    <div className="sm:grid grid-cols-5 gap-3  p-8 ">
-
+    <div className="grid grid-cols-2 sm:grid-cols-5 gap-3 p-4 sm:p-8 ">
       {products.map((product) => (
         <div key={product.id}>
           <Product product={product} />

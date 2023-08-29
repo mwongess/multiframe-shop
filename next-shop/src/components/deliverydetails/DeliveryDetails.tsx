@@ -3,8 +3,8 @@ import Summary from './Summary'
 
 const DeliveryDetails = () => {
   return (
-    <div className='flex justify-between px-20 mb-4'>
-      <div className='w-1/2'>
+    <div className='sm:flex justify-between px-4 sm:px-20 mb-4'>
+      <div className='w-full sm:w-1/2'>
         <h1 className='font-bold text-lg'>Delivery Details</h1>
         <p className='font-bold'>Delivery adress</p>
         <p>Add adress for this shipment</p>
