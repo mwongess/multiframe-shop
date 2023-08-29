@@ -4,14 +4,14 @@ import Link from "next/link"
 import { FaRegUser, FaAngleDown, FaShoppingBag, FaHamburger } from "react-icons/fa";
 import { useRouter } from 'next/navigation'
 
+import { useProducts } from "@/context/productsContext";
+import { useEffect, useState } from "react";
+import Hamburger from "./Hamburger";
 import {
     HoverCard,
     HoverCardContent,
     HoverCardTrigger,
 } from "@/components/ui/hover-card"
-import { useProducts } from "@/context/productsContext";
-import { useEffect, useState } from "react";
-import Hamburger from "./Hamburger";
 
 
 const Navbar = () => {
