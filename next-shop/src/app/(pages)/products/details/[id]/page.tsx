@@ -13,6 +13,7 @@ import Image from "next/image";
 import DetailsLoadingSkeleton from "@/components/DetailsLoadingSkeleton";
 import { useToast } from "@/components/ui/use-toast"
 import { ToastAction } from "@/components/ui/toast";
+import Products from "../../page";
 
 const Readmore = ({ params }: { params: any }) => {
   const [clickedProduct, setClickedProduct] = useState<Iproduct | null>(null)
@@ -114,7 +115,10 @@ const Readmore = ({ params }: { params: any }) => {
             Add To Bag
           </button>
         </div>
-      </div>}
+      </div>
+      
+      }
+      <Products/>
     </>
   );
 };

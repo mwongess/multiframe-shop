@@ -17,8 +17,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className + " 2xl:flex 2xl:justify-center "}>
-        <div className="2xl:w-[55vw]">
+      <body className={inter.className + "  "}>
+        <div className="">
           {children}
         </div>
         <Toaster />
