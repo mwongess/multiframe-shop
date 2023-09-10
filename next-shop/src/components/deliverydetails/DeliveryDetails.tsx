@@ -11,19 +11,19 @@ const DeliveryDetails = () => {
         <form action="">
           <label htmlFor="">NAME</label>
           <div>
-            <input className='w-full border border-slate-300  rounded py-2 bg-transparent ' type="text" name="" id="" />
+            <input className='w-full border border-slate-300  rounded p-2 bg-transparent ' type="text" name="" id="" />
           </div>
           <label htmlFor="">PHONE</label>
           <div>
-            <input className='w-full border border-slate-300  rounded py-2 bg-transparent ' type="text" name="" id="" />
+            <input className='w-full border border-slate-300  rounded p-2 bg-transparent ' type="text" name="" id="" />
           </div>
           <label htmlFor="">POSTAL CODE</label>
           <div>
-            <input className='w-full border border-slate-300 rounded py-2 bg-transparent ' type="text" name="" id="" />
+            <input className='w-full border border-slate-300 rounded p-2 bg-transparent ' type="text" name="" id="" />
           </div>
           <label htmlFor="">ADRESS</label>
           <div>
-            <textarea className='w-full border border-slate-300  rounded py-2 bg-transparent ' name="" id="" cols={30} rows={4}></textarea>
+            <textarea className='w-full border border-slate-300  rounded p-2 bg-transparent ' name="" id="" cols={30} rows={4}></textarea>
           </div>
         </form>
       </div>

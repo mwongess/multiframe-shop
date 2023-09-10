@@ -1,41 +1,56 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import AuthButton from "@/components/AuthButton";
 import Input from "@/components/Input";
 
-const Login= () => {
-  const [user, setUser] = useState({
+const Login = () => {
+  const [formData, setFormData] = useState({
     email: "",
     password: "",
-    userName: "",
   });
-
 
   const inputsData = [
     {
       label: "Email",
       inputType: "email",
       className: "email",
+      name: "email",
       placeholder: "nextshop@mwongess.com",
+      value: formData.email
+
     },
     {
       label: "Password",
       inputType: "password",
       className: "pass",
+      name: "password",
       placeholder: "****",
+      value: formData.password
     },
   ];
+
+  const handleInputChange = (e: any) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const login = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault()
+  }
 
   return (
     <>
       <div className="self-center w-full sm:w-[50%] 2xl:w-[40%]">
-        <form className="w-full">
+        <form className="w-full" onSubmit={login}>
           <button className="bg-[#4065b4] text-white py-2 w-full my-3">Login with Google</button>
 
           {inputsData.map((data) => (
-            <Input inputData={data} />
+            <Input inputData={data} onChange={handleInputChange} />
           ))}
 
           <div className="flex gap-3">
