@@ -49,8 +49,8 @@ const Login = () => {
         <form className="w-full" onSubmit={login}>
           <button className="bg-[#4065b4] text-white py-2 w-full my-3">Login with Google</button>
 
-          {inputsData.map((data) => (
-            <Input inputData={data} onChange={handleInputChange} />
+          {inputsData.map((data, index) => (
+            <Input key={index} inputData={data} onChange={handleInputChange} />
           ))}
 
           <div className="flex gap-3">

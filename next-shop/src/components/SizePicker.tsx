@@ -8,8 +8,8 @@ const SizePicker = () => {
       <h1 className="font-bold mb-3">Choose Size</h1>
       <div className="flex gap-5">
         {
-          sizes.map((size) => (
-            <Size size={size} />
+          sizes.map((size,index) => (
+            <Size key={index} size={size} />
           ))
         }
       </div>
